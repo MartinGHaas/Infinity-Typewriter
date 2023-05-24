@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #f7e018;
+    overflow: hidden;
+}
+
+#typewriter {
+    font-family: 'Fira Code', monospace;
+    color: #000;
+    font-size: calc(32px + 5vw);
+    font-weight: 700;
+}
+
+#typewriter::after {
+    content: '|';
+    margin-left: 3px;
+    animation: blink .7s infinite ease-in;
+}
+
+@keyframes blink{
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
